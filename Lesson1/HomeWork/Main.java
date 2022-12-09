@@ -9,32 +9,36 @@ public class Main {
             result.append(word2.charAt(i));
             i++;
         }
-        if (i == w1) result.append(word2.substring(i, w2));
-        else result.append(word1.substring(i, w1));
+        if (i == w1){
+            result.append(word2.substring(i, w2));
+        }
+        else{
+            result.append(word1.substring(i, w1));
+        }
         return result.toString();
     }
 
     public static int removeElement(int[] nums, int val) {
-        int result = -1;
+        int result = 0;
         for (int i = 0; i < nums.length; i++) {
-            if (nums[i] != val) nums[++result] = nums[i];
+            if (nums[i] != val) nums[result++] = nums[i];
         }
-        return ++result;
+        return result;
     }
 
     public void merge(int[] nums1, int m, int[] nums2, int n) {
-        while (m - 1 >= 0 && n - 1 >= 0) {
-            if (nums1[m - 1] >= nums2[n - 1]) {
-                nums1[(m - 1) + n - 1 + 1] = nums1[m - 1];
-                m--;
+        int k = m + n - 1;
+        m = m - 1;
+        n = n - 1;
+        while (m  >= 0 && n  >= 0) {
+            if (nums1[m] >= nums2[n]) {
+                nums1[k--] = nums1[m--];
             } else {
-                nums1[m - 1 + n - 1 + 1] = nums2[n - 1];
-                n--;
+                nums1[k--] = nums2[n--];
             }
         }
-        while (n - 1 >= 0) {
-            nums1[n - 1] = nums2[n - 1];
-            n--;
+        while (n  >= 0) {
+            nums1[n] = nums2[n--];
         }
     }
 
@@ -49,7 +53,6 @@ public class Main {
             }
 
             int start = end - 1;
-
             while (start >= 0 && s.charAt(start) != ' ') {
                 start--;
             }
