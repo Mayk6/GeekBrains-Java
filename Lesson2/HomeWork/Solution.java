@@ -45,6 +45,8 @@ class Solution {
         floodFillDfs(sr, sc, image[sr][sc], color, image);
         return image;
     }
+
+
     private void floodFillDfs(int sr, int sc, int color, int newColor, int[][] image){
         if (sr < 0 || sr >= image.length || sc < 0 || sc >= image[0].length
                 || image[sr][sc] != color){
@@ -65,6 +67,8 @@ class Solution {
     public boolean isSymmetric(TreeNode root) {
         return isSameTree(root.left,root.right);
     }
+
+
     private boolean isSameTree(TreeNode p, TreeNode q){
         if ((p == null) && (q == null)){
             return true;
