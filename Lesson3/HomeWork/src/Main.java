@@ -1,4 +1,6 @@
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
 
 public class Main {
 
@@ -56,9 +58,7 @@ public class Main {
             if (item == num) numCount--;
         }
 
-        if (numCount == 0) return true;
-
-        return false;
+        return numCount == 0;
     }
 
 
