@@ -33,7 +33,8 @@ public class Main {
     }
 
 
-    //    На вход приходят два ArrayList<Integer> напишите метод, который проверяет два массива на равенство. Нужно реализовать алгоритм, не использовать метод equals.
+    //    На вход приходят два ArrayList<Integer> напишите метод, который проверяет два массива на равенство.
+    //    Нужно реализовать алгоритм, не использовать метод equals.
     public static boolean arrayEquality(ArrayList<Integer> arr1, ArrayList<Integer> arr2) {
         if (arr1.size() != arr2.size()) {
             return false;
