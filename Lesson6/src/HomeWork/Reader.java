@@ -17,7 +17,6 @@ public class Reader {
         this.phone = phone;
     }
 
-
     public void takeBook(int amount) {
         System.out.printf("%s взял %d книги\n", fio, amount);
     }

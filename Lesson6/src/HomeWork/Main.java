@@ -29,12 +29,4 @@ public class Main {
         ivanov.returnBook("Азбука", "Грокаем алгоритмы");
         ivanov.returnBook(adventure,dictionary,encyclopedia);
     }
-
-
-
-
-
-
-
-
 }
